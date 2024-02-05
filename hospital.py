@@ -2,7 +2,9 @@ import datetime
 import random as rd
 import pandas as pd
 import mysql.connector as sqltor
-con=sqltor.connect(host="localhost",user="root",password="root")
+root=input("Enter SQL USERNAME:- ")
+passwd = input("Enter SQL PASSWORD:- ")
+con=sqltor.connect(host="localhost",user=root,password=passwd)
 cur=con.cursor()
 
 cur = con.cursor(buffered=True) 
